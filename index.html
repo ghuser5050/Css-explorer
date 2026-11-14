@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+      <meta data-sandbox-injected="" http-equiv="Content-Security-Policy" content="
+          default-src 'none';
+          base-uri 'none';
+          connect-src https://fonts.gstatic.com https://www.gstatic.com https://cdnjs.cloudflare.com https://maps.googleapis.com https://places.googleapis.com https://cdn.tailwindcss.com;
+          font-src https://fonts.gstatic.com data: https://cdnjs.cloudflare.com https://maps.googleapis.com https://places.googleapis.com https://cdn.tailwindcss.com;
+          form-action 'none';
+          frame-src https://www.google.com/maps/;
+          worker-src blob: https://*.scf.usercontent.goog;
+          img-src https://*.gstatic.com https://unsplash.com https://images.unsplash.com https://flagcdn.com https://a.espncdn.com https://placehold.co https://lens.usercontent.google.com https://img.youtube.com https://lh3.googleusercontent.com https://maps.googleapis.com data: https://encrypted-tbn0.gstatic.com https://encrypted-tbn1.gstatic.com https://encrypted-tbn2.gstatic.com https://encrypted-tbn3.gstatic.com ;
+          media-src 'none';
+          object-src 'none';
+          script-src 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com https://widgetlibs.static.usercontent.goog https://*.scf.usercontent.goog https://cdnjs.cloudflare.com https://maps.googleapis.com https://places.googleapis.com https://cdn.tailwindcss.com;
+          style-src 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.gstatic.com/ https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://maps.googleapis.com https://places.googleapis.com https://cdn.tailwindcss.com;">
+      <meta data-sandbox-injected="" charset="UTF-8">
+      <meta data-sandbox-injected="" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="enable-onep-api" content="false"><script data-sandbox-injected="true">(function(){var g=Object.defineProperty,k=globalThis,l=function(a,b){if(b)a:{var c=k;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&b!=null&&g(c,a,{configurable:!0,writable:!0,value:b})}};l("Promise.withResolvers",function(a){return a?a:function(){var b,c;return{promise:new Promise(function(d,e){b=d;c=e}),resolve:b,reject:c}}});var m=function(a){return typeof a==="object"&&a!==null&&"kind"in a&&typeof a.kind==="string"&&("payload"in a||a.kind==="___CROSS_FRAME_HANDSHAKE___")},n=class{constructor(){this.j=new Map}i(a){var b=a.data;if(m(b)){let c=b.payload;if(b=this.j.get(b.kind))(a=a.ports&&a.ports.length>0?a.ports:void 0)?b(c,a):b(c)}}sendMessage(a,b,c){if(!this.port)throw Error("a");a={kind:String(a),payload:b||{}};c&&c.length>0?this.port.postMessage(a,c):this.port.postMessage(a)}},p=async function(a){var b=window.parent;
+return a.h?{}:new Promise(c=>{var d=e=>{e.source===b&&m(e.data)&&e.data.kind==="___CROSS_FRAME_HANDSHAKE___"&&(window.removeEventListener("message",d),a.port=e.ports[0],a.port.onmessage=a.i.bind(a),a.h=!0,c(e.data.payload||{}))};window.addEventListener("message",d)})},q=class extends n{constructor(){super(...arguments);this.h=!1}};if(typeof window!=="undefined"&&window.history){let a=window.history.replaceState.bind(window.history);window.history.replaceState=(c,d,e)=>{try{a(c,d,e)}catch{}};let b=window.history.pushState.bind(window.history);window.history.pushState=(c,d,e)=>{try{b(c,d,e)}catch{}}}
+if(typeof window!=="undefined"&&window.fetch){let a=window.fetch.bind(window);window.fetch=async(...b)=>{try{return await a(...b)}catch(c){b=b[0];b=typeof b==="string"?b:b&&typeof b==="object"&&"url"in b?String(b.url||""):String(b||"");if(b.includes("tracking")||b.includes("analytics")||b.includes("beacon"))return new Response(null,{status:204});throw c;}}}var {promise:r,resolve:t}=Promise.withResolvers(),{promise:u,resolve:v}=Promise.withResolvers(),w=!1;
+(async function(){var a=new q,b=await p(a);b&&b.enableSandboxToEditorSync&&(w=!!b.enableSandboxToEditorSync);if(b&&b.initialPayload){let c=b.initialPayload;window.initialPayload=c;window.setTimeout(()=>{window.dispatchEvent(new MessageEvent("message",{data:c}))},0)}t(a);(a=a.port)&&v(a)})();function x(a){r.then(b=>{b.sendMessage("ERROR",{error:a})})}window.onerror=(a,b,c,d,e)=>{x(e);return!0};
+window.onunhandledrejection=a=>{var b=String(a.reason||"");b.includes("Failed to fetch")||b.includes("Content Security Policy")||b.includes("replaceState")||x(Error(a.reason));a.preventDefault()};
+window.document.addEventListener("DOMContentLoaded",()=>{r.then(a=>{a.sendMessage("ISOLATE_READY",{});var b=window.document.querySelector("#resize-target")||window.document.body,c=NaN,d=NaN,e=!1;(new ResizeObserver(()=>{e||(e=!0,window.requestAnimationFrame(()=>{e=!1;var f=Math.ceil(b.scrollHeight),h=Math.ceil(b.scrollWidth);f===c&&h===d||f===0&&h===0||(c=f,d=h,a.sendMessage("RESIZE",{height:f,width:h}))}))})).observe(b);if(w){let f;(new MutationObserver(()=>{f&&window.clearTimeout(f);f=window.setTimeout(()=>
+{f=void 0;a.sendMessage("HTML_CHANGED",{html:"<!DOCTYPE html>\n"+window.document.documentElement.outerHTML})},500)})).observe(window.document.documentElement,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}})});window.addEventListener("resizeRequest",()=>{r.then(a=>{var b=window.document.querySelector("#resize-target")||window.document.body,c=Math.ceil(b.scrollHeight);b=Math.ceil(b.scrollWidth);c===0&&b===0||a.sendMessage("MANUAL_RESIZE",{height:c,width:b})})});
+function y(a){var b=null;a instanceof Element?b=a:a&&a.nodeType===Node.TEXT_NODE&&(b=a.parentElement);if(!b)return null;for(a=b;a&&a!==window.document.body;){if(a.matches('a,button,input,textarea,select,option,details,summary,area,[jsaction],[data-jsaction],[role],[tabindex]:not([tabindex="-1"])'))return z(a);if(a instanceof HTMLElement&&a.isContentEditable)return z(a);a=a.parentElement}return null}
+function z(a){var b={tagName:a.tagName.toUpperCase(),attributes:{}},c=["role","jsaction","data-jsaction","tabindex"];for(let d of c)c=a.getAttribute(d),c!==null&&(b.attributes[d]=c);a instanceof HTMLElement&&a.isContentEditable&&(b.isContentEditable=!0);return b}window.addEventListener("click",a=>{var b=(a=a.target)?y(a):null;r.then(c=>{c.sendMessage("CLICK",{matchedNode:b})})},!0);
+window.addEventListener("request_window_open",a=>{var b=a.detail;r.then(c=>{c.sendMessage("REQUEST_WINDOW_OPEN",{url:b.url,target:b.target,features:b.features})})});window.sandboxConsoleLog=(a,b)=>{r.then(c=>{c.sendMessage("CONSOLE_LOG",{logLevel:a,message:b})})};if(document.querySelector('meta[name="enable-onep-api"]')?.getAttribute("content")==="true"){let a=!1;window.claimPortReady=()=>{if(a)return null;a=!0;return u}}window.logError=x;}).call(this);</script><script>(function(){var d=console.warn,e=console.error,f=console.info;function g(c){return c.map(a=>{try{return a instanceof Error?a.toString():typeof a==="object"?JSON.stringify(a):String(a)}catch(b){return String(a)}}).join(" ")}function h(c,a){return(...b)=>{a.apply(console,b);b=g(b);b.startsWith("Sandbox ready")||b.startsWith("Sandbox frame bootstrapping")||window.sandboxConsoleLog&&window.sandboxConsoleLog(c,b)}}console.log=h("log",console.log);console.warn=h("warn",d);console.error=h("error",e);
+console.info=h("info",f);window.addEventListener("error",c=>{window.sandboxConsoleLog&&window.sandboxConsoleLog("error",c.message)});}).call(this);</script><script>(function(){window.open=(a,b,d)=>{var c;a&&(c=a instanceof URL?a.toString():String(a));window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:c,target:b,features:d}}));return null};var e,f,g;function h(a){a.button===0&&((e=a=(a.target instanceof Element?a.target:null)?.closest("a")??void 0)?(a=a.getBoundingClientRect(),f=a.left,g=a.top):g=f=void 0)}function k(){g=f=e=void 0}window.addEventListener("pointerdown",h,!0);window.addEventListener("mousedown",h,!0);
+window.addEventListener("pointercancel",k,!0);
+window.addEventListener("click",a=>{var b=(a.target instanceof Element?a.target:null)?.closest("a"),d=b?.getBoundingClientRect();d=a.detail>0&&b!=null&&e===b&&d!==void 0&&f!==void 0&&g!==void 0&&(Math.abs(d.left-f)>5||Math.abs(d.top-g)>5);k();if(b&&b.hasAttribute("href")){b=b.getAttribute("href")??"";var c=b.trim();c.startsWith("#")||(c=c.replace(/[\u0000-\u0020]+/g,""),c===""||/^javascript:/i.test(c)?a.preventDefault():d||a.defaultPrevented?(a.preventDefault(),a.stopPropagation()):(a.preventDefault(),
+a.stopPropagation(),window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:b,target:"_blank"}}))))}},!0);}).call(this);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>CSS Universal Explorer</title><script src="https://cdn.tailwindcss.com"></script><style>
+        /* Custom scrollbar styling for clean mobile look */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 2px;
+        }
+        /* Lock viewport scrolling to behave like a native app */
+        body, html {
+            overflow: hidden;
+            height: 100%;
+            position: relative;
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        /* Ensure active elements have prominent touch response */
+        .touch-target {
+            min-height: 44px;
+        }
+    </style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.relative{position:relative}.bottom-4{bottom:1rem}.left-4{left:1rem}.z-10{z-index:10}.z-50{z-index:50}.mb-2{margin-bottom:0.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-2{height:0.5rem}.h-24{height:6rem}.h-3{height:0.75rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-full{height:100%}.min-h-0{min-height:0px}.min-h-\[160px\]{min-height:160px}.w-2{width:0.5rem}.w-2\/5{width:40%}.w-24{width:6rem}.w-3{width:0.75rem}.w-3\.5{width:0.875rem}.w-3\/5{width:60%}.w-4{width:1rem}.w-7{width:1.75rem}.w-full{width:100%}.max-w-xs{max-width:20rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.translate-y-20{--tw-translate-y:5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.select-all{-webkit-user-select:all;user-select:all}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-x-reverse > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:1}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-800\/40 > :not([hidden]) ~ :not([hidden]){border-color:rgb(30 41 59 / 0.4)}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-visible{overflow:visible}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.whitespace-pre-wrap{white-space:pre-wrap}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-0{border-width:0px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-t{border-top-width:1px}.border-r-2{border-right-width:2px}.border-dashed{border-style:dashed}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-800\/60{border-color:rgb(30 41 59 / 0.6)}.border-slate-800\/80{border-color:rgb(30 41 59 / 0.8)}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.border-amber-900{--tw-border-opacity:1;border-color:rgb(120 53 15 / var(--tw-border-opacity, 1))}.border-cyan-900{--tw-border-opacity:1;border-color:rgb(22 78 99 / var(--tw-border-opacity, 1))}.border-purple-900{--tw-border-opacity:1;border-color:rgb(88 28 135 / var(--tw-border-opacity, 1))}.border-slate-900{--tw-border-opacity:1;border-color:rgb(15 23 42 / var(--tw-border-opacity, 1))}.border-r-indigo-500{--tw-border-opacity:1;border-right-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.bg-\[\#00f2fe\]{--tw-bg-opacity:1;background-color:rgb(0 242 254 / var(--tw-bg-opacity, 1))}.bg-\[\#00ffd0\]{--tw-bg-opacity:1;background-color:rgb(0 255 208 / var(--tw-bg-opacity, 1))}.bg-\[\#4facfe\]{--tw-bg-opacity:1;background-color:rgb(79 172 254 / var(--tw-bg-opacity, 1))}.bg-\[\#64748b\]{--tw-bg-opacity:1;background-color:rgb(100 116 139 / var(--tw-bg-opacity, 1))}.bg-\[\#a855f7\]{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.bg-\[\#ec4899\]{--tw-bg-opacity:1;background-color:rgb(236 72 153 / var(--tw-bg-opacity, 1))}.bg-\[\#ff2a5f\]{--tw-bg-opacity:1;background-color:rgb(255 42 95 / var(--tw-bg-opacity, 1))}.bg-\[\#ffee55\]{--tw-bg-opacity:1;background-color:rgb(255 238 85 / var(--tw-bg-opacity, 1))}.bg-\[\#ffffff\]{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/30{background-color:rgb(15 23 42 / 0.3)}.bg-slate-900\/50{background-color:rgb(15 23 42 / 0.5)}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-amber-950{--tw-bg-opacity:1;background-color:rgb(69 26 3 / var(--tw-bg-opacity, 1))}.bg-cyan-950{--tw-bg-opacity:1;background-color:rgb(8 51 68 / var(--tw-bg-opacity, 1))}.bg-purple-950{--tw-bg-opacity:1;background-color:rgb(59 7 100 / var(--tw-bg-opacity, 1))}.bg-orange-400{--tw-bg-opacity:1;background-color:rgb(251 146 60 / var(--tw-bg-opacity, 1))}.bg-indigo-950\/60{background-color:rgb(30 27 75 / 0.6)}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-indigo-500{--tw-gradient-from:#6366f1 var(--tw-gradient-from-position);--tw-gradient-to:rgb(99 102 241 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-purple-500{--tw-gradient-to:#a855f7 var(--tw-gradient-to-position)}.p-1{padding:0.25rem}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pr-1{padding-right:0.25rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[8px\]{font-size:8px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252 / var(--tw-text-opacity, 1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.placeholder-slate-500::placeholder{--tw-placeholder-opacity:1;color:rgb(100 116 139 / var(--tw-placeholder-opacity, 1))}.accent-indigo-500{accent-color:#6366f1}.opacity-0{opacity:0}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-150{transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800\/40:hover{background-color:rgb(30 41 59 / 0.4)}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:border-indigo-500:active{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}</style></head>
+    <body class="flex flex-col h-full text-slate-200">
+  
+  <header class="bg-slate-900 border-b border-slate-800 px-4 py-3 flex items-center justify-between z-10 shrink-0 select-none">
+        <div class="flex items-center space-x-2 space-x-reverse">
+            <div class="w-3 h-3 rounded-full bg-indigo-500 animate-pulse"></div>
+            <h1 class="text-base font-bold tracking-tight text-white">CSS Universal Explorer</h1>
+        </div>
+        <!-- Master Copy Button for Mobile User to easily grab the app source itself -->
+        <button id="btnCopySelfCode" class="bg-slate-800 hover:bg-indigo-600 text-xs text-indigo-300 hover:text-white px-3 py-1.5 rounded-lg border border-slate-700 transition flex items-center gap-1.5 touch-target">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+            <span>העתק קוד אפליקציה</span>
+        </button>
+    </header><main class="flex-1 flex flex-col min-h-0 overflow-hidden relative">
+        
+        <!-- Live Playground Section (Sticky Top/Center representation) -->
+        <section class="w-full bg-slate-950 p-4 border-b border-slate-800 flex flex-col items-center justify-center shrink-0">
+            <span class="text-[10px] text-slate-500 uppercase tracking-widest font-mono mb-2 self-start">אזור הדגמה אינטראקטיבי (Playground)</span>
+            
+            <div id="playgroundViewport" class="w-full min-h-[160px] bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-4 relative overflow-hidden transition-all duration-300">
+                
+                <!-- Target 1: Modern Box Container (Div Box) -->
+                <div id="targetBox" class="w-24 h-24 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-xl shadow-lg flex items-center justify-center text-center text-xs font-semibold text-white transition-all duration-150 hidden">
+                    <span>קופסה</span>
+                </div>
+
+                <!-- Target 2: Rich Typography Container (Hidden by default) -->
+                <div id="targetText" class="hidden text-center max-w-xs transition-all duration-150">
+                    <p class="text-xl font-bold leading-snug">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="text-sm text-slate-400 mt-1">מערך טיפוגרפיה מקיף לבדיקת גופנים, צללים ומרווחים.</p>
+                </div>
+
+                <!-- Target 3: Vector Graphics SVG Container (Hidden by default) -->
+                <div id="targetSvgContainer" class="transition-all duration-150">
+                    <svg id="targetSvgElement" width="120" height="120" viewBox="0 0 100 100" class="overflow-visible" data-redraw="9">
+                        <defs>
+                            <!-- Custom filter elements targeted dynamically by attributes -->
+                            <filter id="dynamicFilter" x="-20%" y="-20%" width="140%" height="140%">
+                                <feFlood id="svgFeFlood" flood-color="#ec4899" flood-opacity="0.6" result="flood"></feFlood>
+                                <feComposite in="flood" in2="SourceGraphic" operator="in"></feComposite>
+                                <feDropShadow id="svgFeDropShadow" dx="3" dy="3" stdDeviation="3" flood-color="#000000"></feDropShadow>
+                            </filter>
+                        </defs>
+                        <!-- Dynamic SVG Shape targeting fills, strokes, and filters -->
+                        <polygon id="targetSvgShape" points="50,5 95,95 5,95" fill="#ffee55" stroke="#a5b4fc" stroke-width="2" fill-opacity="#00ffd0" style="fill-opacity: 0.9; fill: rgb(255, 238, 85);"></polygon>
+                    </svg>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Dynamic Controls & Scanner Sections Split -->
+        <section class="flex-1 flex min-h-0 overflow-hidden">
+            
+            <!-- Right Panel: Alphabetic Live Scanner List -->
+            <div class="w-2/5 border-l border-slate-800 bg-slate-900/50 flex flex-col min-h-0">
+                <!-- Search & Filters Container -->
+                <div class="p-2 border-b border-slate-800 space-y-2 shrink-0 bg-slate-900">
+                    <input type="text" id="propSearch" placeholder="חפש תכונה..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-2 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition">
+                    
+                    <!-- Category Filters -->
+                    <div class="grid grid-cols-2 gap-1 text-[10px]">
+                        <button data-cat="all" class="cat-btn font-medium py-1 px-1.5 rounded transition truncate bg-slate-800 text-slate-400">הכל (<span id="countAll">473</span>)</button>
+                        <button data-cat="layout" class="cat-btn bg-slate-800 text-slate-400 py-1 px-1.5 rounded transition truncate">פריסה (<span id="countLayout">93</span>)</button>
+                        <button data-cat="typography" class="cat-btn bg-slate-800 text-slate-400 py-1 px-1.5 rounded transition truncate">טקסט (<span id="countTypography">66</span>)</button>
+                        <button data-cat="svg" class="cat-btn py-1 px-1.5 rounded transition truncate bg-indigo-600 text-white">SVG (<span id="countSvg">22</span>)</button>
+                    </div>
+                </div>
+
+                <!-- Scrollable List of Formatted Properties Detected Natively -->
+                <div id="propertiesList" class="flex-1 overflow-y-auto custom-scrollbar p-1 divide-y divide-slate-800/40"><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">clip-path</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300 ">
+                    <span class="truncate pr-1">fill</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300 ">
+                    <span class="truncate pr-1">fill-opacity</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300 ">
+                    <span class="truncate pr-1">fill-rule</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300 ">
+                    <span class="truncate pr-1">flood-color</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">flood-opacity</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300 bg-indigo-950/60 border-r-2 border-r-indigo-500 text-white">
+                    <span class="truncate pr-1">lighting-color</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">marker-end</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">marker-mid</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">marker-start</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">scroll-marker-group</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stop-color</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stop-opacity</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stroke</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stroke-dasharray</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stroke-dashoffset</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stroke-linecap</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stroke-linejoin</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stroke-miterlimit</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stroke-opacity</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">stroke-width</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div><div class="p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 hover:bg-slate-800/40 text-slate-300">
+                    <span class="truncate pr-1">vector-effect</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 bg-purple-950 text-purple-400 border border-purple-900">svg</span>
+                </div></div>
+            </div>
+
+            <!-- Left Panel: Contextual Value Selection & Generator -->
+            <div class="w-3/5 bg-slate-950 flex flex-col min-h-0">
+                
+                <!-- Selected Property Title Area -->
+                <div class="p-3 bg-slate-900/30 border-b border-slate-800 shrink-0">
+                    <div id="activePropName" class="text-sm font-mono font-bold text-indigo-400 truncate">lighting-color</div>
+                    <div id="activePropSyntax" class="text-[10px] font-mono text-slate-500 mt-0.5 overflow-x-auto custom-scrollbar whitespace-nowrap">Syntax: &lt;custom-value-token&gt;</div>
+                </div>
+
+                <!-- Values Customizer Panel -->
+                <div class="flex-1 overflow-y-auto custom-scrollbar p-3 space-y-4">
+                    
+                    <!-- Online JSON Status Badge -->
+                    <div id="repoStatusContainer" class="text-[11px] bg-slate-900 border border-slate-800/80 rounded-lg p-2 flex items-center justify-between text-slate-400">
+                        <span class="flex items-center gap-1">
+                            <span id="statusIndicator" class="w-2 h-2 rounded-full bg-orange-400"></span>
+                            <span id="statusText">שגיאת רשת במשיכה. חילוץ שמות תכונות בלבד.</span>
+                        </span>
+                    </div>
+
+                    <!-- Dynamic Input Context Containers based on data extracted -->
+                    <div class="space-y-2">
+                        <label class="text-[10px] text-slate-400 font-medium tracking-wide uppercase">ערכים חוקיים שזוהו במאגר:</label>
+                        <div id="valueButtonsContainer" class="flex flex-wrap gap-1.5"><button class="bg-slate-900 hover:bg-slate-800 border border-slate-800 active:border-indigo-500 text-slate-300 px-2 py-1 rounded text-xs font-mono transition touch-target">inherit</button><button class="bg-slate-900 hover:bg-slate-800 border border-slate-800 active:border-indigo-500 text-slate-300 px-2 py-1 rounded text-xs font-mono transition touch-target">initial</button><button class="bg-slate-900 hover:bg-slate-800 border border-slate-800 active:border-indigo-500 text-slate-300 px-2 py-1 rounded text-xs font-mono transition touch-target">unset</button></div>
+                    </div>
+
+                    <!-- Advanced Parameter Sliders (For dimensions/opacity numbers) -->
+                    <div id="numericControllerBlock" class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800 space-y-2 hidden">
+                        <div class="flex justify-between items-center text-[11px]">
+                            <span class="text-indigo-300 font-mono" id="sliderLabelName">התאמת עוצמה / מידה ל-fill-opacity:</span>
+                            <span id="sliderCurrentValue" class="font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded font-mono">0.9</span>
+                        </div>
+                        <input type="range" id="customValueSlider" min="0" max="1" value="50" class="w-full accent-indigo-500 bg-slate-950 h-2 rounded-lg appearance-none cursor-pointer" step="0.05">
+                        <div class="flex gap-1 justify-end">
+                            <button id="btnUnitPx" class="unit-btn text-[9px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded active">px</button>
+                            <button id="btnUnitPct" class="unit-btn text-[9px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded">%</button>
+                            <button id="btnUnitRem" class="unit-btn text-[9px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded">rem</button>
+                            <button id="btnUnitNum" class="unit-btn text-[9px] px-1.5 py-0.5 rounded bg-indigo-600 text-white">נקי</button>
+                        </div>
+                    </div>
+
+                    <!-- Smart Visual Color Selection Palette Block -->
+                    <div id="visualColorPaletteBlock" class="space-y-2">
+                        <label class="text-[10px] text-slate-400 font-medium tracking-wide uppercase">פלטת צבעים מודרנית מהירה:</label>
+                        <div class="grid grid-cols-5 gap-1.5">
+                            <button data-color="#ff2a5f" class="w-full h-7 rounded bg-[#ff2a5f] border border-white/10 active:scale-95 transition"></button>
+                            <button data-color="#00f2fe" class="w-full h-7 rounded bg-[#00f2fe] border border-white/10 active:scale-95 transition"></button>
+                            <button data-color="#4facfe" class="w-full h-7 rounded bg-[#4facfe] border border-white/10 active:scale-95 transition"></button>
+                            <button data-color="#00ffd0" class="w-full h-7 rounded bg-[#00ffd0] border border-white/10 active:scale-95 transition"></button>
+                            <button data-color="#ffee55" class="w-full h-7 rounded bg-[#ffee55] border border-white/10 active:scale-95 transition"></button>
+                            <button data-color="#a855f7" class="w-full h-7 rounded bg-[#a855f7] border border-white/10 active:scale-95 transition"></button>
+                            <button data-color="#ec4899" class="w-full h-7 rounded bg-[#ec4899] border border-white/10 active:scale-95 transition"></button>
+                            <button data-color="#ffffff" class="w-full h-7 rounded bg-[#ffffff] border border-slate-700 active:scale-95 transition"></button>
+                            <button data-color="#64748b" class="w-full h-7 rounded bg-[#64748b] border border-white/10 active:scale-95 transition"></button>
+                            <button data-color="transparent" class="w-full h-7 rounded border-2 border-dashed border-slate-700 flex items-center justify-center text-[8px] text-slate-500 font-bold active:scale-95 transition">X</button>
+                        </div>
+                        <div class="flex items-center gap-2 bg-slate-900 p-1.5 rounded-lg border border-slate-800">
+                            <span class="text-[10px] text-slate-400 pr-1">בחירה ידנית:</span>
+                            <input type="color" id="manualColorPicker" value="#6366f1" class="w-7 h-6 rounded bg-transparent border-0 cursor-pointer">
+                            <input type="text" id="manualColorText" value="#6366f1" class="flex-1 bg-slate-950 text-xs font-mono text-indigo-300 border border-slate-800 rounded px-1.5 py-0.5 focus:outline-none">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Generated Real-Time CSS Output Rule Container -->
+                <div class="p-3 bg-slate-900 border-t border-slate-800 space-y-2 shrink-0">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] font-mono text-slate-400 tracking-wider">CSS RULE GENERATED</span>
+                        <button id="btnCopyCssCode" class="text-[10px] text-indigo-400 hover:text-white bg-slate-950 border border-slate-800 hover:bg-indigo-600 px-2 py-1 rounded transition flex items-center gap-1">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                            <span>העתק חוק</span>
+                        </button>
+                    </div>
+                    <pre id="cssSnippetCode" class="w-full bg-slate-950 p-2 rounded border border-slate-800/60 font-mono text-[11px] text-indigo-300 overflow-x-auto custom-scrollbar whitespace-pre-wrap select-all">#svg-shape-polygon {<br>  flood-color: #ec4899;<br>  fill-opacity: #00ffd0;<br>  fill: #ffee55;<br>}</pre>
+                </div>
+
+            </div>
+        </section>
+
+    </main><div id="toastNotification" class="fixed bottom-4 left-4 bg-indigo-600 text-white text-xs px-3 py-2 rounded-lg shadow-xl translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span id="toastText">הועתק בהצלחה!</span>
+    </div><script>
+        // Core state management
+        let allNativeProperties = [];
+        let dictionaryCssData = {};
+        let activeSelectedProperty = '';
+        let currentActiveCategory = 'all';
+        let currentUnit = 'px';
+        
+        // Track generated properties values applied
+        let appliedStylesState = {};
+
+        // DOM elements cache
+        const propertiesList = document.getElementById('propertiesList');
+        const activePropName = document.getElementById('activePropName');
+        const activePropSyntax = document.getElementById('activePropSyntax');
+        const valueButtonsContainer = document.getElementById('valueButtonsContainer');
+        const cssSnippetCode = document.getElementById('cssSnippetCode');
+        const propSearch = document.getElementById('propSearch');
+        const statusIndicator = document.getElementById('statusIndicator');
+        const statusText = document.getElementById('statusText');
+        
+        // Playground elements target references
+        const targetBox = document.getElementById('targetBox');
+        const targetText = document.getElementById('targetText');
+        const targetSvgContainer = document.getElementById('targetSvgContainer');
+        const targetSvgElement = document.getElementById('targetSvgElement');
+        const targetSvgShape = document.getElementById('targetSvgShape');
+        const svgFeFlood = document.getElementById('svgFeFlood');
+        const svgFeDropShadow = document.getElementById('svgFeDropShadow');
+
+        // Context Blocks
+        const numericControllerBlock = document.getElementById('numericControllerBlock');
+        const sliderLabelName = document.getElementById('sliderLabelName');
+        const sliderCurrentValue = document.getElementById('sliderCurrentValue');
+        const customValueSlider = document.getElementById('customValueSlider');
+        const visualColorPaletteBlock = document.getElementById('visualColorPaletteBlock');
+        const manualColorPicker = document.getElementById('manualColorPicker');
+        const manualColorText = document.getElementById('manualColorText');
+
+        // Dynamic categories counter holders
+        const countAllText = document.getElementById('countAll');
+        const countLayoutText = document.getElementById('countLayout');
+        const countTypographyText = document.getElementById('countTypography');
+        const countSvgText = document.getElementById('countSvg');
+
+        /**
+         * Dynamic native engine property inspection 
+         * Queries the browser render tree directly for all compliant keywords
+         */
+        function scanDeviceNativeProperties() {
+            const sampleStyles = window.getComputedStyle(document.body);
+            const discovered = [];
+            
+            // Loop through directly available indexes natively
+            for (let i = 0; i < sampleStyles.length; i++) {
+                discovered.push(sampleStyles[i]);
+            }
+            
+            // Fallback scanner check on CSSStyleDeclaration prototype keys
+            if (discovered.length === 0) {
+                const styleProto = CSSStyleDeclaration.prototype;
+                for (const key in styleProto) {
+                    if (typeof styleProto[key] === 'string' && isNaN(key) && !key.startsWith('webkit') && !key.startsWith('moz')) {
+                        // Convert camelCase to kebab-case
+                        const kebab = key.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+                        if (!discovered.includes(kebab)) discovered.push(kebab);
+                    }
+                }
+            }
+
+            // Clean up duplicates and perform native alphabetical sort
+            allNativeProperties = [...new Set(discovered)].sort();
+            return allNativeProperties;
+        }
+
+        /**
+         * Smart Dynamic Classification into functional categories
+         */
+        function classifyPropertyCategory(prop) {
+            const name = prop.toLowerCase();
+            
+            // SVG specific vector attributes
+            if (name.includes('svg') || name.startsWith('fill') || name.startsWith('stroke') || 
+                name.includes('flood') || name.includes('marker') || name.startsWith('stop-') || 
+                name.includes('clip-path') || name.includes('vector-effect') || name.includes('lighting-color')) {
+                return 'svg';
+            }
+            // Typography rules
+            if (name.includes('font') || name.includes('text') || name.includes('line-height') || 
+                name.includes('letter-spacing') || name.includes('word-') || name.includes('writing-mode') || 
+                name.includes('direction') || name.includes('white-space')) {
+                return 'typography';
+            }
+            // Layout mechanics
+            if (name.includes('grid') || name.includes('flex') || name.includes('margin') || 
+                name.includes('padding') || name.includes('align-') || name.includes('justify-') || 
+                name.includes('position') || name.includes('display') || name.includes('width') || 
+                name.includes('height') || ['top', 'bottom', 'left', 'right', 'z-index'].includes(name)) {
+                return 'layout';
+            }
+            // Style decoration fallbacks
+            return 'design';
+        }
+
+        /**
+         * Fetching official JSON files from raw GitHub sources natively
+         */
+        async function fetchUniversalJsonRepositoryData() {
+            // Repos targets array ordered for optimal fallback delivery
+            const fetchEndpoints = [
+                'https://githubusercontent.com',
+                'https://githubusercontent.com'
+            ];
+
+            for (const url of fetchEndpoints) {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error('Network error on source response status');
+                    const parsedData = await response.json();
+                    
+                    // Transform MDN layout or WebRef structure seamlessly into active layout mapping
+                    if (parsedData.properties && Array.isArray(parsedData.properties)) {
+                        // WebRef specification schema array conversion
+                        dictionaryCssData = {};
+                        parsedData.properties.forEach(item => {
+                            if (item.name) {
+                                dictionaryCssData[item.name] = { syntax: item.syntax || '' };
+                            }
+                        });
+                    } else {
+                        // Standard flat object map layout from MDN
+                        dictionaryCssData = parsedData;
+                    }
+
+                    // Update UI status badge to notify valid ingestion
+                    statusIndicator.className = "w-2 h-2 rounded-full bg-emerald-500";
+                    statusText.innerText = `מאגר אונליין מסונכרן (${Object.keys(dictionaryCssData).length} חוקים)`;
+                    return true;
+                } catch (e) {
+                    console.warn(`Failed fetching from source target ${url}:`, e);
+                }
+            }
+
+            // Soft feedback UI configuration if local proxy failure happens
+            statusIndicator.className = "w-2 h-2 rounded-full bg-orange-400";
+            statusText.innerText = "שגיאת רשת במשיכה. חילוץ שמות תכונות בלבד.";
+            return false;
+        }
+
+        /**
+         * Extract legitimate individual keywords directly out of raw syntax grammar patterns
+         */
+        function parseValidValuesFromSyntax(syntaxString) {
+            if (!syntaxString) return ['inherit', 'initial', 'unset'];
+            
+            const discoveredTokens = new Set(['inherit', 'initial', 'unset']);
+            
+            // Extract explicitly defined literal alphanumeric characters or hyphenated words
+            // Avoid capturing variable macro tokens inside brackets like <color>, <length>
+            const syntaxCleanRegex = /(?:\b)([a-z-][a-z0-9-]+)(?:\b)/g;
+            let matchGroup;
+            
+            while ((matchGroup = syntaxCleanRegex.exec(syntaxString)) !== null) {
+                const keyword = matchGroup[1].trim();
+                // Reject general data type macros or placeholders
+                if (!['rgba', 'rgb', 'hsl', 'calc', 'var', 'url'].includes(keyword)) {
+                    discoveredTokens.add(keyword);
+                }
+            }
+            
+            return Array.from(discoveredTokens);
+        }
+
+        /**
+         * Force clean visual re-rendering of live graphic containers
+         * Critical execution for reliable mobile browser refresh of SVG custom matrix filters
+         */
+        function enforceVisualForceRedraw(targetCategory) {
+            if (targetCategory === 'svg') {
+                // Manipulate dummy namespace attribute on live nodes to coerce redraw
+                const val = targetSvgElement.getAttribute('data-redraw') || '0';
+                targetSvgElement.setAttribute('data-redraw', String(Number(val) + 1));
+                
+                // Toggle structure element append sequence
+                const parent = targetSvgElement.parentNode;
+                const nextSib = targetSvgElement.nextSibling;
+                parent.removeChild(targetSvgElement);
+                parent.insertBefore(targetSvgElement, nextSib);
+            }
+        }
+
+        /**
+         * Switch active playground viewport element dynamically based on type detection
+         */
+        function automaticallyDeterminePlaygroundElement(prop, category) {
+            // Hide all layout nodes initially
+            targetBox.classList.add('hidden');
+            targetText.classList.add('hidden');
+            targetSvgContainer.classList.add('hidden');
+
+            if (category === 'svg') {
+                targetSvgContainer.classList.remove('hidden');
+                return { element: targetSvgShape, type: 'svg' };
+            } else if (category === 'typography') {
+                targetText.classList.remove('hidden');
+                return { element: targetText, type: 'text' };
+            } else {
+                targetBox.classList.remove('hidden');
+                return { element: targetBox, type: 'box' };
+            }
+        }
+
+        /**
+         * Render filtered alphabetic lists to screen viewports
+         */
+        function populateInspectionDashboardUiList() {
+            const query = propSearch.value.trim().toLowerCase();
+            propertiesList.innerHTML = '';
+            
+            let filtered = allNativeProperties.filter(p => p.includes(query));
+            
+            // Calculate and display functional stats counters dynamically
+            let counts = { all: allNativeProperties.length, layout: 0, typography: 0, svg: 0, design: 0 };
+            allNativeProperties.forEach(p => {
+                const cat = classifyPropertyCategory(p);
+                counts[cat]++;
+            });
+            
+            countAllText.innerText = counts.all;
+            countLayoutText.innerText = counts.layout;
+            countTypographyText.innerText = counts.typography;
+            countSvgText.innerText = counts.svg;
+
+            // Apply active category filter logic
+            if (currentActiveCategory !== 'all') {
+                filtered = filtered.filter(p => classifyPropertyCategory(p) === currentActiveCategory);
+            }
+
+            if (filtered.length === 0) {
+                propertiesList.innerHTML = `<div class="p-4 text-center text-xs text-slate-600">אין תכונות תואמות למסננים</div>`;
+                return;
+            }
+
+            // Draw lists elements securely
+            filtered.forEach(prop => {
+                const cat = classifyPropertyCategory(prop);
+                let badgeColor = 'bg-slate-800 text-slate-400';
+                if (cat === 'layout') badgeColor = 'bg-cyan-950 text-cyan-400 border border-cyan-900';
+                if (cat === 'typography') badgeColor = 'bg-amber-950 text-amber-400 border border-amber-900';
+                if (cat === 'svg') badgeColor = 'bg-purple-950 text-purple-400 border border-purple-900';
+
+                const row = document.createElement('div');
+                row.className = `p-2.5 text-xs font-mono cursor-pointer transition flex items-center justify-between touch-target select-none border-b border-slate-900 ${activeSelectedProperty === prop ? 'bg-indigo-950/60 border-r-2 border-r-indigo-500 text-white' : 'hover:bg-slate-800/40 text-slate-300'}`;
+                row.innerHTML = `
+                    <span class="truncate pr-1">${prop}</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded uppercase font-sans tracking-wide shrink-0 ${badgeColor}">${cat}</span>
+                `;
+                
+                row.addEventListener('click', () => handlePropertySelectionContext(prop));
+                propertiesList.appendChild(row);
+            });
+        }
+
+        /**
+         * Handle property choice context and initialize functional panels setup
+         */
+        function handlePropertySelectionContext(propertyName) {
+            activeSelectedProperty = propertyName;
+            
+            // Refresh selection highlight classes seamlessly
+            Array.from(propertiesList.children).forEach(child => {
+                const isSelected = child.firstElementChild.innerText === propertyName;
+                child.className = child.className.replace(/bg-indigo-950.*/g, '');
+                if (isSelected) {
+                    child.className += ' bg-indigo-950/60 border-r-2 border-r-indigo-500 text-white';
+                }
+            });
+
+            activePropName.innerText = propertyName;
+            
+            // Extract schema syntax parameters from parsed dictionary state
+            const info = dictionaryCssData[propertyName];
+            const rawSyntax = info ? info.syntax : '';
+            activePropSyntax.innerText = rawSyntax ? `Syntax: ${rawSyntax}` : 'Syntax: <custom-value-token>';
+
+            const category = classifyPropertyCategory(propertyName);
+            const activePlayground = automaticallyDeterminePlaygroundElement(propertyName, category);
+
+            // Clean values configuration layout blocks
+            valueButtonsContainer.innerHTML = '';
+            numericControllerBlock.classList.add('hidden');
+            visualColorPaletteBlock.classList.add('hidden');
+
+            // Render value buttons extracted from schema
+            const legalValues = parseValidValuesFromSyntax(rawSyntax);
+            legalValues.forEach(val => {
+                const btn = document.createElement('button');
+                btn.className = "bg-slate-900 hover:bg-slate-800 border border-slate-800 active:border-indigo-500 text-slate-300 px-2 py-1 rounded text-xs font-mono transition touch-target";
+                btn.innerText = val;
+                btn.addEventListener('click', () => applyStyleRuleToPlaygroundTarget(propertyName, val, activePlayground));
+                valueButtonsContainer.appendChild(btn);
+            });
+
+            // Context-aware UI extension 1: Handle values matching colors structures
+            if (propertyName.includes('color') || propertyName.includes('fill') || propertyName.includes('stroke') || propertyName === 'background') {
+                visualColorPaletteBlock.classList.remove('hidden');
+            }
+
+            // Context-aware UI extension 2: Handle range sliders for bounds numeric tokens
+            if (rawSyntax.includes('<length>') || rawSyntax.includes('<percentage>') || rawSyntax.includes('<number>') || 
+                rawSyntax.includes('<opacity-value>') || propertyName.includes('width') || propertyName.includes('height') || 
+                propertyName.includes('opacity') || propertyName.includes('spacing') || propertyName.includes('radius') || propertyName.includes('margin') || propertyName.includes('padding')) {
+                
+                numericControllerBlock.classList.remove('hidden');
+                sliderLabelName.innerText = `התאמת עוצמה / מידה ל-${propertyName}:`;
+                
+                // Fine-tune sliders configuration ranges constraints dynamically
+                if (propertyName.includes('opacity')) {
+                    customValueSlider.min = "0";
+                    customValueSlider.max = "1";
+                    customValueSlider.step = "0.05";
+                    customValueSlider.value = appliedStylesState[propertyName] || "1";
+                    currentUnit = '';
+                    toggleUnitButtonsHighlight('btnUnitNum');
+                } else {
+                    customValueSlider.min = "0";
+                    customValueSlider.max = propertyName.includes('width') || propertyName.includes('height') ? "300" : "100";
+                    customValueSlider.step = "1";
+                    customValueSlider.value = parseInt(appliedStylesState[propertyName]) || "40";
+                    currentUnit = propertyName.includes('opacity') ? '' : (currentUnit || 'px');
+                }
+                sliderCurrentValue.innerText = `${customValueSlider.value}${currentUnit}`;
+            }
+
+            // Render current styling layout status snippets
+            regenerateCssSnippetContainerOutput();
+        }
+
+        /**
+         * Apply dynamic changes natively onto respective viewport elements
+         */
+        function applyStyleRuleToPlaygroundTarget(property, value, config) {
+            if (!property) return;
+            
+            // Track applied configurations
+            appliedStylesState[property] = value;
+
+            const category = classifyPropertyCategory(property);
+
+            // Intercept and route SVG specific internal attributes smoothly
+            if (category === 'svg') {
+                if (property.startsWith('flood-')) {
+                    // Update targeted filter subcomponents directly
+                    if (property === 'flood-color') svgFeFlood.setAttribute('flood-color', value);
+                    if (property === 'flood-opacity') svgFeFlood.setAttribute('flood-opacity', value);
+                } else if (property.startsWith('stroke-')) {
+                    targetSvgShape.style[property] = value;
+                    // Mirror onto svg shape container attributes for maximum engine compatibility
+                    targetSvgShape.setAttribute(property, value);
+                } else {
+                    targetSvgShape.style[property] = value;
+                    targetSvgShape.setAttribute(property, value);
+                }
+            } else {
+                // Route generic CSS styles natively to standard HTML DOM style declaration
+                config.element.style[property] = value;
+            }
+
+            // Force browser repaint updates
+            enforceVisualForceRedraw(category);
+            
+            // Synchronize text outputs
+            regenerateCssSnippetContainerOutput();
+        }
+
+        /**
+         * Re-generate display code markup based on live styles applied array
+         */
+        function regenerateCssSnippetContainerOutput() {
+            let outputLines = [];
+            const activeCat = activeSelectedProperty ? classifyPropertyCategory(activeSelectedProperty) : 'design';
+            
+            let selectorName = '#playground-box';
+            if (activeCat === 'typography') selectorName = '#playground-text';
+            if (activeCat === 'svg') selectorName = '#svg-shape-polygon';
+
+            for (const [prop, val] of Object.entries(appliedStylesState)) {
+                outputLines.push(`  ${prop}: ${val};`);
+            }
+
+            if (outputLines.length === 0) {
+                cssSnippetCode.innerText = `${selectorName} {\n  /* אין סגנונות מותאמים כעת */\n}`;
+            } else {
+                cssSnippetCode.innerText = `${selectorName} {\n${outputLines.join('\n')}\n}`;
+            }
+        }
+
+        /**
+         * Helper helper utility to update unit control state visuals
+         */
+        function toggleUnitButtonsHighlight(activeBtnId) {
+            document.querySelectorAll('.unit-btn').forEach(btn => {
+                btn.classList.remove('bg-indigo-600', 'text-white');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            const activeNode = document.getElementById(activeBtnId);
+            if (activeNode) {
+                activeNode.classList.remove('bg-slate-800', 'text-slate-300');
+                activeNode.classList.add('bg-indigo-600', 'text-white');
+            }
+        }
+
+        /**
+         * Display operational messages via toast overlay
+         */
+        function showNotificationToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            document.getElementById('toastText').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+
+        /**
+         * Clipboard utility engine utilizing custom fallback for multiplatform canvas integrations
+         */
+        function copyTextStringToClipboardContainer(textString) {
+            const textarea = document.createElement('textarea');
+            textarea.value = textString;
+            textarea.style.position = 'fixed'; // Prevent layout scrolling artifacts
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                // Using compliant standard execCommand to reliably process actions within Sandbox containers
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showNotificationToast("הועתק ללוח בהצלחה!");
+                } else {
+                    throw new Error('Copy command returned false value status');
+                }
+            } catch (err) {
+                console.error('Fallback clipboard execution failed:', err);
+                showNotificationToast("שגיאה בהעתקה אוטומטית.");
+            }
+            
+            document.body.removeChild(textarea);
+        }
+
+        // Initialize event listeners hooks stack
+        function initializeCoreApplicationHooks() {
+            
+            // Realtime search text keyup parser
+            propSearch.addEventListener('input', populateInspectionDashboardUiList);
+
+            // Set categories tab buttons clicks listeners
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.cat-btn').forEach(b => {
+                        b.classList.remove('bg-indigo-600', 'text-white');
+                        b.classList.add('bg-slate-800', 'text-slate-400');
+                    });
+                    
+                    const targetedButton = e.currentTarget;
+                    targetedButton.classList.remove('bg-slate-800', 'text-slate-400');
+                    targetedButton.classList.add('bg-indigo-600', 'text-white');
+                    
+                    currentActiveCategory = targetedButton.getAttribute('data-cat');
+                    populateInspectionDashboardUiList();
+                });
+            });
+
+            // Multi-unit configuration handlers
+            document.getElementById('btnUnitPx').addEventListener('click', () => { currentUnit = 'px'; toggleUnitButtonsHighlight('btnUnitPx'); triggerSliderChangeUpdate(); });
+            document.getElementById('btnUnitPct').addEventListener('click', () => { currentUnit = '%'; toggleUnitButtonsHighlight('btnUnitPct'); triggerSliderChangeUpdate(); });
+            document.getElementById('btnUnitRem').addEventListener('click', () => { currentUnit = 'rem'; toggleUnitButtonsHighlight('btnUnitRem'); triggerSliderChangeUpdate(); });
+            document.getElementById('btnUnitNum').addEventListener('click', () => { currentUnit = ''; toggleUnitButtonsHighlight('btnUnitNum'); triggerSliderChangeUpdate(); });
+
+            // Slider manipulation feedback listener
+            customValueSlider.addEventListener('input', triggerSliderChangeUpdate);
+
+            function triggerSliderChangeUpdate() {
+                if (!activeSelectedProperty) return;
+                const value = customValueSlider.value + currentUnit;
+                sliderCurrentValue.innerText = value;
+                const category = classifyPropertyCategory(activeSelectedProperty);
+                applyStyleRuleToPlaygroundTarget(activeSelectedProperty, value, {
+                    element: category === 'svg' ? targetSvgShape : (category === 'typography' ? targetText : targetBox)
+                });
+            }
+
+            // Quick color grid execution block mapper
+            document.querySelectorAll('[data-color]').forEach(paletteBtn => {
+                paletteBtn.addEventListener('click', (e) => {
+                    const colorHex = e.currentTarget.getAttribute('data-color');
+                    manualColorPicker.value = colorHex.startsWith('#') ? colorHex : '#6366f1';
+                    manualColorText.value = colorHex;
+                    
+                    if (activeSelectedProperty) {
+                        const category = classifyPropertyCategory(activeSelectedProperty);
+                        applyStyleRuleToPlaygroundTarget(activeSelectedProperty, colorHex, {
+                            element: category === 'svg' ? targetSvgShape : (category === 'typography' ? targetText : targetBox)
+                        });
+                    }
+                });
+            });
+
+            // Color elements pickers bindings
+            manualColorPicker.addEventListener('input', (e) => {
+                const chosenColor = e.target.value;
+                manualColorText.value = chosenColor;
+                if (activeSelectedProperty) {
+                    const category = classifyPropertyCategory(activeSelectedProperty);
+                    applyStyleRuleToPlaygroundTarget(activeSelectedProperty, chosenColor, {
+                        element: category === 'svg' ? targetSvgShape : (category === 'typography' ? targetText : targetBox)
+                    });
+                }
+            });
+
+            manualColorText.addEventListener('change', (e) => {
+                const txtVal = e.target.value;
+                if (activeSelectedProperty) {
+                    const category = classifyPropertyCategory(activeSelectedProperty);
+                    applyStyleRuleToPlaygroundTarget(activeSelectedProperty, txtVal, {
+                        element: category === 'svg' ? targetSvgShape : (category === 'typography' ? targetText : targetBox)
+                    });
+                }
+            });
+
+            // Action triggers for copying codes snippet blocks
+            document.getElementById('btnCopyCssCode').addEventListener('click', () => {
+                copyTextStringToClipboardContainer(cssSnippetCode.innerText);
+            });
+
+            document.getElementById('btnCopySelfCode').addEventListener('click', () => {
+                // Grabs the outer document tree markup directly to isolate code file source
+                const entireDocumentHtmlCode = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+                copyTextStringToClipboardContainer(entireDocumentHtmlCode);
+            });
+        }
+
+        // Execution Lifecycle Engine Entry
+        window.addEventListener('DOMContentLoaded', async () => {
+            // 1. Map native specifications properties array
+            scanDeviceNativeProperties();
+            
+            // 2. Initialize DOM binding triggers
+            initializeCoreApplicationHooks();
+            
+            // 3. Paint interface list elements placeholder
+            populateInspectionDashboardUiList();
+            
+            // 4. Ingest dynamic legal definitions arrays online asynchronously
+            await fetchUniversalJsonRepositoryData();
+            
+            // 5. Re-render UI list to link dynamic metadata descriptors safely
+            populateInspectionDashboardUiList();
+        });
+    </script></body></html>
